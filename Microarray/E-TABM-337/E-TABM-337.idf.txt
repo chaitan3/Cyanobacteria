@@ -1,0 +1,49 @@
+Investigation Title	Transcription profiling of time series of Cyanothece sp. ATCC 51142 grown in 12 hour light/12 hour dark cycle	
+Comment[Submitted Name]	Cyanothece sp. ATCC 51142 12 hour light / 12 hour dark 48 hour time course	
+Experimental Design	time_series_design	co-expression_design	transcription profiling by array	
+Experimental Design Term Source REF	mo	mo	EFO	
+Comment[ArrayExpressReleaseDate]	2008-07-11	
+Comment[SecondaryAccession]		
+Comment[AEMIAMESCORE]	5	
+Comment[ArrayExpressAccession]	E-TABM-337	
+Comment[MAGETAB TimeStamp_Version]	2010-08-12 19:13:21 Last Changed Rev: 13058	
+Experimental Factor Name	Time	
+Experimental Factor Type	time	
+Experimental Factor Term Source REF	
+Person Last Name	Welsh	
+Person First Name	Eric	
+Person Mid Initials	A.	
+Person Email	ewelsh@biology.wustl.edu	
+Person Phone	
+Person Fax	
+Person Address	Department of Biology; Washington University in Saint Louis; One Brookings Drive; Campus Box 1137; Saint Louis, MO 63130; USA	
+Person Affiliation	Washington University in Saint Louis	
+Person Roles	submitter	
+Person Roles Term Source REF	The MGED Ontology	
+Quality Control Type	biological_replicate	dye_swap_quality_control	technical_replicate	
+Quality Control Term Source REF	The MGED Ontology	The MGED Ontology	The MGED Ontology	
+Replicate Type	
+Replicate Term Source REF	
+Normalization Type	
+Normalization Term Source REF	
+Date of Experiment	
+Public Release Date	2008-07-11	
+PubMed ID	18427117	
+Publication DOI	18427117	
+Publication Author List	Stöckel J, Welsh EA, Liberton M, Kunnvakkam R, Aurora R, Pakrasi HB	
+Publication Title	Global transcriptomic analysis of Cyanothece 51142 reveals robust diurnal oscillation of central metabolic processes	
+Publication Status	journal_article	
+Publication Status Term Source REF	
+Experiment Description	Cyanothece sp. ATCC 51142 12 hour light / 12 hour dark 48 hour time course	
+Protocol Name	P-TABM-1824	P-TABM-1823	P-TABM-1825	P-TABM-1826	P-TABM-1827	P-TABM-1828	P-TABM-1829	
+Protocol Type	specified_biomaterial_action	grow	nucleic_acid_extraction	labeling	hybridization	feature_extraction	bioassay_data_transformation	
+Protocol Description	The cells were cultivated in alternating 12 hour light/dark conditions. After 7 days, samples were taken every 4 hours over a time period of 48 hours, starting with one hour into the dark period (time point D1). In total, 12 samples were collected. The cells were grown to a cell density of OD730=0.088 (DW2000, SLM-AMINCO, Urbana, IL). 100 ml cells were collected, spun down by centrifugation at 6000xg, frozen in liquid nitrogen and stored at -80&deg;C.	Cyanothece cultures were grown in ASP2 medium without NaNO3 in alternating 12 hour light/dark cycles at 30&deg;C. The cultures were bubbled with air and the illumination was 50 &#956;E m-2 s-1. The growth was spectrophotometrically monitored by measuring OD730 on a DW2000 (SLM-AMINCO, Urbana, IL).	Total RNA was harvested using RNAwiz reagent (Ambion).	2.5 &#956;g of total RNA was labeled using MICROMAX ASAP RNA labeling kit (Perkin Elmer Life and Analytical Sciences).	750 ng of each labeled RNA with a specific activity 50 pmol DYE/&#956;g RNA was hybridized in 750 &#956;l to each array. Hybridization was performed per manufacturers directions for 16 hours.	Scanning was performed with a Agilent 2565 AA DNA Microarray scanner using defaults parameters (100% PMT, 10 &#956;m resolution, at 20&deg;C in low ozone concentration environment. Microarray images were analyzed by using Feature Extraction software version A.8.1 from Agilent technologies. Defaults settings were used.	Background intensities were subtracted from raw signal intensities to yield the background substracted signals for each spot. Spots with background substracted signal intensities less than +2*sd above the average background intensity were flagged as below the noise threshold, and spots with raw signal intensities above the saturation level were flagged as saturated. These spots were not considered when training the normalization procedure. The background substracted signal intensities were ranked for each channel, and spots that differed by less than +/- 10% rank order between channels were kept for training the normalization. LOWESS fitting of -ln(target/control) vs. ln(control) was performed on the training set, using a window size of 0.25. The fit LOWESS curve was used to correct both the target and control intensities, evenly distributing the corrective scaling between the two channels. Linear interpolation of the scaling factors was used to correct spots that lay between those included in the LOWESS fit. Average log2 ratios for each probe were calculated by averaging all normalized log2 ratios corresponding to spots not flagged as saturated or below the noise level, except for probes for which fewer than two replicates met this criteria, in which case all replicates were used in calculating the average.	
+Protocol Parameters	
+Protocol Hardware	
+Protocol Software	
+Protocol Contact	
+Protocol Term Source REF						The MGED Ontology	The MGED Ontology	
+SDRF File	E-TABM-337.sdrf.txt	
+Term Source Name	The MGED Ontology		ArrayExpress	The MGED Ontology	mo	EFO	
+Term Source File	http://mged.sourceforge.net/ontologies/MGEDontology.php		http://www.ebi.ac.uk/arrayexpress	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://www.ebi.ac.uk/efo/	
+Term Source Version							

@@ -1,0 +1,57 @@
+Comment[ArrayExpressAccession]	E-GEOD-14225
+Public Release Date	2009-07-31							
+Investigation Title	Circadian and diurnal expression data of Synechococcus							
+Comment[Submitted Name]	Circadian and diurnal expression data of Synechococcus
+Experiment Description	In the unicellular cyanobacterium, Synechococcus elongatus PCC 7942, essentially all promoter activities are under the control of the circadian clock in continuous light (LL) conditions. Here, we employed high-density oligonucleotide arrays to explore comprehensive profiles of genome-wide Synechococcus gene expression in wild type, kaiABC-null and kaiC-overexpressor strains under LL and continuous dark (DD) conditions. In the wild type strain more than 30% of transcripts significantly oscillated in a circadian fashion, peaking at subjective dawn and dusk. Such circadian control was nullified in kaiABC-null strains. Although KaiC has been proposed to globally repress gene expression, our analysis revealed that dawn expressing genes were upregulated by kaiC-overexpression, such that the clock was arrested at subjective dawn. Transfer of cells to continuous dark (DD) conditions from LL immediately suppressed expression of most of genes, while the clock keeps time even in the absence of transcriptional feedback. Thus, the Synechococcus genome seems primarily regulated by the light/dark cycles and dramatically modified by the protein-based circadian oscillator.  Keywords: timecourse data (~48 hours under continuous light or darkness) from Synechococcus elongatus PCC 7942 (wild type, kaiABC-null, and inducible kaiC-overexpressor) strains Wild type (WT), kaiABC-null (Dkai), and inducible kaiC-overexpressor (oxC) S. elongatus PCC 7942 strains were analyzed under continuous light (LL), continuous dark (DD) using Affymetrix high-density oligonucleotide microarrays (GeneChip CustomExpress Arrays) representing predicted 2,516 protein-coding genes on the genome of Synechococcus elongatus PCC 6301, which can be used also to the almost homologous strain, S. elongatus PCC 7942: Two independent experiments in WT under LL (hours 4 to 52) and DD (hours 0 to 52); Two independent experiments in Dkai under LL (hours 4 to 44); Two independent experiments in oxC under LL in the presence or absence of an inducer, IPTG, from hour 25 to 33 in LL; a single experiment in WT under DD in the presence of an transcriptional inhibitor, rifampicin.							
+Date of Experiment								
+Term Source Name	EFO
+Term Source Version								
+Term Source File	http://www.ebi.ac.uk/efo/efo.owl							
+Person Last Name	Iwasaki	Iwasaki	Ito	Tomita	Murayama	Terauchi		
+Person First Name	Hideo	Hideo	Hiroshi	Jun	Yoriko	Kazuki		
+Person Mid Initials								
+Person Email	hideo-iwasaki@waseda.jp							
+Person Affiliation	Waseda University							
+Person Phone								
+Person Fax								
+Person Address	Electrical Engineering & Bioscience, Waseda University, TWIns 1F 2-2 Wakamatsu-cho, Shinjuku, Tokyo, Japan							
+Person Roles	submitter							
+Person Roles Term Source REF								
+Person Roles Term Accession Number								
+Normalization Type								
+Normalization Term Accession Number								
+Normalization Term Source REF								
+Replicate Type								
+Replicate Term Accession Number								
+Replicate Term Source REF								
+Experimental Design								
+Experimental Design Term Accession Number								
+Experimental Design Term Source REF								
+Quality Control Type								
+Quality Control Term Accession Number								
+Quality Control Term Source REF								
+Protocol Name	P-GSE14225-1	P-GSE14225-6	P-GSE14225-3	P-GSE14225-8	P-GSE14225-7	P-GSE14225-2	P-GSE14225-4	P-GSE14225-5
+Protocol Description	ID_REF = <br>VALUE = GCOS intensity normalized as described above (data processing)	Following fragmentation, 1.5 ug of cDNA were hybridized for 16 hr at 45C on GeneChip Synechococcus Custom Arrays (Syel6301a520114F). GeneChips were washed and stained in the Affymetrix Fluidics Station 400.	Synechococcus cells were grown in continuous culture systems in any conditions at 30C under the light (46 micromol/m^2/sec) or the dark	The data were analyzed with GeneChip Operating Software (GCOS) ver 1.2.1.001 using Affymetrix default analysis settings, divided by corresponding genomic DNA signals (genomic DNA sample), and global scaling as normalization method except for samples under DD conditions. The trimmed average target intensity of each array was arbitrarily set to 1000. For data under DD, genomic-DNA-divided value is shown.	GeneChips were scanned using the Affymetrix GeneChip Scanner 3000.	Cells were collected at indicated times and stored at -80C until use	Total RNAs were extracted with a modified hot-phenol extraction method	Biotinylated cDNA were prepared according to the standard Affymetrix prokaryotic protocol from 10 ug total RNA (Expression Analysis Technical Manual)
+Protocol Software								
+Protocol Hardware								
+Protocol Contact								
+Protocol Type	bioassay_data_transformation	hybridization	grow	feature_extraction	image_aquisition	specified_biomaterial_action	nucleic_acid_extraction	labeling
+Protocol Term Source REF								
+Protocol Term Accession Number								
+Experimental Factor Name	GENOTYPE							
+Experimental Factor Type	Genotype							
+Experimental Factor Term Source REF								
+Experimental Factor Term Accession Number								
+Publication Title								
+Publication Author List								
+PubMed ID	19666549							
+Publication DOI								
+Publication Status								
+Publication Status Term Source REF								
+Publication Status Term Accession Number								
+Comment[SecondaryAccession]	GSE14225							
+Comment[GEOLastUpdateDate]	2009-08-26
+Comment[AEExperimentType]	transcription profiling by array							
+Comment[GEOReleaseDate]	2009-07-30
+Comment[ArrayExpressSubmissionDate]	2008-12-29
+SDRF File	E-GEOD-14225.sdrf.txt

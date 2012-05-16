@@ -1,0 +1,31 @@
+Todo: 
+
+Read Susan's redox input paper latest
+Read bioprocess reactions All
+Meet monday with Sir
+Look into which genes responsible for the circadian clock in Cyanothece
+KaiBC feedback
+
+Notes:
+ldpA mutant shortens period, shorter under high light, longer in low light
+cikA required for phasing of the clock, response to dark pulse
+cikA mutant shorter period, reduction in amplitude of gene expression rhythms
+cikA abundance varies inversely with light intensity
+ldpA mutant cikA locked at lowest level, kaiA elevated
+DBMIB - photoelectric transport inhibitor, quinone analog
+DBMIB decreases stability of ldpA, cikA, kaiA
+oxidized DBMID reduces stability of cikA, kaiA
+
+Problems
+Too high generation
+
+
+Verification
+kaiA matching - cikA paper
+kaiC matching - rhythms paper
+response to a dark pulse
+back to dark from light
+
+python:
+PySCeS for plots?
+

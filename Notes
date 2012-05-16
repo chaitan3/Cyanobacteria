@@ -1,0 +1,38 @@
+Check temperature compensation
+Check the various biochemical models
+Steps altering the time period
+1. Phosphorylation rate: amount of ATP, kaiA
+2. Rate of kaiB binding: amount of kaiB
+3. Dephosphorylaton rate: ?
+kaiC monomer exchange for population synchronization
+
+bioinformatics Analysis Conclusions
+1. kaiB: closest is kaiB1 then B2, B4
+B3 very different and much bigger
+2. kaiC1, C2 both have the ST 431,432 residues
+kaiC2 doesnt seem to have the C-terminal domain
+3. kaiC II C-terminal domain ring, S-loop T495->E487
+kaiC1 has S in T495 position sort of match
+kaiC2 has no matching aa's in T495 and E487
+4. Longer kaiB may not bind in pairs to kaiC 
+
+microRNA
+1. RNA transcription peaks at start of transcript
+2. mRNA transript structure. CAP - 5' UTR - Start - Codons - Stop - 3' UTR - Poly AA
+3. Promoter, RNA polymerase
+4. 5' UTR contains regulatory elements, RBS
+5. Some non coding transcripts show circadian oscillations in expression
+6. Large distance between TSS and start codon indicates regulation
+7. Why can't everyone use the same terminology
+8. check Yfr2
+9. check SyR1, high light strong expression, overexpression severe phenotype
+10. asRNA in psbA, anti sense block inhibition
+
+Steps
+1. microRNA compare it with RFAM 
+2. asRNA sequence
+3. RNA transcripts whose Expression pattern is opposite to that of psbA1
+Check with genes: known which are opposite related to metabolism
+sigma factors, known promoters
+
+

@@ -1,0 +1,50 @@
+Investigation Title	Oscillations in supercoiling drive circadian gene expression in cyanobacteria	
+Comment[Submitted Name]	Oscillations in supercoiling drive circadian gene expression in cyanobacteria	
+Experimental Design	transcription profiling by array	
+Experimental Design Term Source REF	EFO	
+Comment[SecondaryAccession]	GSE18902	
+Comment[ArrayExpressReleaseDate]	2010-05-19	
+Comment[AEMIAMESCORE]	3	
+Comment[Publication DOI]	10.1073/pnas.0912673106	
+Comment[ArrayExpressAccession]	E-GEOD-18902	
+Comment[MAGETAB TimeStamp_Version]	2010-08-03 17:37:02 Last Changed Rev: 13058	
+Experimental Factor Name	EXPERIMENT	REFERENCE	
+Experimental Factor Type	experiment	reference	
+Experimental Factor Term Source REF	
+Person Last Name	O'Shea	Zuzow	Vijayan	
+Person First Name	Erin	Rick	Vikram	
+Person Mid Initials	K	
+Person Email			vvijayan@fas.harvard.edu	
+Person Phone	
+Person Fax	
+Person Address			Harvard University, 52 Oxford Street, Room 440, Cambridge, MA, USA	
+Person Affiliation			Harvard University	
+Person Roles			submitter	
+Person Roles Term Source REF			The MGED Ontology	
+Quality Control Type	
+Quality Control Term Source REF	
+Replicate Type	
+Replicate Term Source REF	
+Normalization Type	
+Normalization Term Source REF	
+Date of Experiment	
+Public Release Date	2010-05-19	
+PubMed ID	20018699	
+Publication DOI	20018699	
+Publication Author List	Vijayan V, Zuzow R, O'Shea EK	
+Publication Title	Oscillations in supercoiling drive circadian gene expression in cyanobacteria.	
+Publication Status	journal_article	
+Publication Status Term Source REF	The MGED Ontology	
+Experiment Description	The cyanobacterium Synechococcus elongatus PCC 7942 exhibits oscillations in mRNA transcript abundance with 24-hour periodicity under continuous light conditions. The mechanism underlying these oscillations remains elusive â neither cis nor trans-factors controlling circadian gene expression phase have been identified. Here we show that the topological status of the chromosome is highly correlated with circadian gene expression state. We also demonstrate that DNA sequence characteristics of genes that appear monotonically activated and monotonically repressed by chromosomal relaxation during the circadian cycle are similar to those of supercoiling responsive genes in E. coli. Furthermore, perturbation of superhelical status within the physiological range elicits global changes in gene expression similar to those that occur during the normal circadian cycle. Synechococcus elongatus PCC 7942 was subjected to two consecutive light/dark cycles and released into continuous light (T = 0). Cells were sampled every 4 hours from T = 24 to T = 84 hours for microarray analysis to characterize circadian gene expression. In a separate experiment, to characterize the response of S. elongatus to immediate chromosome relaxation, cells were sampled at T = 56 and T = 64 hours, immediately followed by novobiocin treatment (0.1 ug/ml), and the resulting response was measured by microarray after 5, 10, 30, 90, and 150 minutes. This experiment was designed to test whether chromosomal relaxation is sufficient to induce gene expression changes similar to those observed during the circadian cycle.	
+Protocol Name	P-GSE18902-4	P-GSE18902-3	P-GSE18902-2	P-GSE18902-5	P-GSE18902-6	P-GSE18902-7	P-GSE18902-8	P-GSE18902-1	
+Protocol Type	nucleic_acid_extraction	grow	specified_biomaterial_action	labeling	hybridization	image_aquisition	feature_extraction	bioassay_data_transformation	
+Protocol Description	RNA was extracted from frozen cells in two steps. First, cells were lysed in 65Â° C phenol/SDS (sodium dodecyl sulfate) by vortexing and the total RNA was purified by phenol/chloroform extraction. Second, total RNA was subjected to DNase I (Promega) treatment followed by a second phenol/chloroform extraction. Total RNA was analyzed on agarose gel and Agilent Bioanalyzer for integrity.	A continuous culture apparatus was developed to keep cells in constant conditions and provide real-time bioluminescence readings. S. elongatus (strain AMC 408) was grown in a 6 liter cylindrical spinner flask (Corning) at a volume of 4.5 liters. Cells were grown in modified BG-11 medium with the following modifications: 0.0010 g/liter of FeNH4 citrate was used instead of 0.0012 g/liter of FeNH4 citrate and citric acid was supplemented at 0.00066 g/liter. Cells were initially inoculated in the presence of antibiotics (5 Âµg/ml spectinomycin and 5 Âµg/ml chloramphenicol), and subsequently diluted with modified BG-11 only. Cells were exposed to surface flux of ~25 Âµmol photons m-2 s-1 white light, bubbled with 500 ml min-1 1% CO2 in air, maintained at 30Âº C, and stirred at 1 rotation per second. Constant optical density (OD750 0.15) and volume are achieved via a two state controller. OD does not fluctuate more than 8% during an experiment.	For all experiments, cells are exposed to two light/dark cycles for entrainment prior to release into continuous light, collected at designated times by vacuum filtration, snap frozen in liquid nitrogen, and stored in -80Âº C. For novobiocin treatment experiment, cells were sampled at T = 56 and T = 64 hours into the circadian cycle. At T = 64 hours, cells were treated with novobiocin sodium salt at concentration 0.1 ug/ml. Cells were then sampled at 5, 10, 30, 90, and 150 minutes using protocol mentioned above.	cDNA was prepared for each individual time-point (foreground channel) as well as for a pool of all time-points (background channel). Spike-in RNA was introduced at different concentrations and ratios to the foreground and background channels prior to reverse transcription in order to ensure proper ratio detection in a wide dynamic range. 5 Î¼g total RNA (plus spike-ins) was reverse-transcribed with random 15-mer primers (Operon) and a 2:3 ratio of amino allyl-UTP:dTTP (Sigma) using SuperScript III reverse-transcriptase (Invitrogen) without amplification. RNA was hydrolyzed and cDNA was purified using Microcon 30 spin column (Millipore).   cDNA was labeled with N-Hydroxysuccinimide-ester Cyanine 3 (Cy3, foreground) or Cyanine 5 (Cy5, background) (GE Biosciences) in 0.1 M sodium bicarbonate pH 9.0 for 6 hours. Labeled cDNA was purified (Microcon 30, Millipore) in preparation for hybridization.	Each array was hybridized with 150 to 300 ng Cy3 and 150 to 300 ng Cy5 labeled cDNA and rotated (5 rotations min-1) at 60Âº C for 17 hours in SureHyb chambers (Agilent). Arrays were subsequently washed in 6.7X SSPE and 0.005% N-lauryl sarcosine buffer for at least 1 minute, 0.67X SSPE and 0.005% N-lauryl sarcosine buffer for 1 minute, and then Agilent drying and ozone protection wash for 30 seconds at room temperature (1X SSPE = 0.15 M NaCl, 10 Î¼M sodium phosphate, 1 mM EDTA, pH 7.4).	The arrays were immediately scanned using an Axon 4000B scanner at 5 Î¼m resolution.	The average intensity of the Cy3 and Cy5 florescence at each spot was extracted using the GenePix software (Molecular Devices) and loaded into MATLAB (Mathworks). Loess and quantile normalization were performed using the MATLAB bioinformatics toolbox.	ID_REF = <br>VALUE = Lowess and quantile normalized log2(sample/average). Reported is the average of 4 separate probes per predicted ORF.	
+Protocol Parameters	
+Protocol Hardware	
+Protocol Software	
+Protocol Contact	
+Protocol Term Source REF							The MGED Ontology	The MGED Ontology	
+SDRF File	E-GEOD-18902.sdrf.txt	
+Term Source Name	The MGED Ontology		ArrayExpress	EFO	The MGED Ontology	
+Term Source File	http://mged.sourceforge.net/ontologies/MGEDontology.php		http://www.ebi.ac.uk/arrayexpress	http://www.ebi.ac.uk/efo/	http://mged.sourceforge.net/ontologies/MGEDontology.php	
+Term Source Version						
