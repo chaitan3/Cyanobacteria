@@ -26,10 +26,9 @@ microRNA
 10. asRNA in psbA, anti sense block inhibition
 
 Todo
-For 4-5 genes of interest whose promoter activity is given, make a plot for each
-time point using Vijayan's data. The plot should contain the tiling microarray
-expression levels of probes that are 1 kb upstream and downstream both plus and 
-minus strand.
+Get RNA sequencing data and get the 5' UTR region for genes like psbA
+Make pics for kaiABC, purF
+Analysis of the pics
 Answer Promoter->microRNA->Phenotype correlation for elongatus and extend to Cyanothece.
 
 
