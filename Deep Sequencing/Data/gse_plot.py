@@ -8,9 +8,10 @@ tss = 413826-gene[0]
 #text = 'purF time point ' + str(time_point+1)
 #gene = [4596, 6077]
 
-walk = 1000
+upstream = 600
+downstream = 4000
 
-spread = [gene[0] - walk, gene[1] + walk]
+spread = [gene[0] - upstream, gene[1] + downstream]
 px = []
 nx = []
 py = []
