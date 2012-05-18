@@ -1,15 +1,31 @@
 import csv
 import matplotlib.pyplot as plt
+import sys
 
 time_point = 0
+if len(sys.argv) > 1:
+  time_point = int(sys.argv[1])
 text = 'psbA time point ' + str(time_point+1)
 gene = [413873,414955]
-tss = 413826-gene[0]
+tss = 413826
+tes = 415018
+reg = [
+#Anti sense
+[413843,413937],
+#3'UTR
+[415031,415062],
+[415078,415122],
+[415151,415177],
+[415217,415253],
+[415291,415310],
+[415352,415377]
+
+]
 #text = 'purF time point ' + str(time_point+1)
 #gene = [4596, 6077]
 
-upstream = 600
-downstream = 4000
+upstream = 500
+downstream = 500
 
 spread = [gene[0] - upstream, gene[1] + downstream]
 px = []
@@ -69,12 +85,21 @@ print 'Data generated'
 
 plt.plot(px,py,'r', label='Plus')
 plt.plot(nx,ny,'b', label='Minus')
+#Gene
 plt.fill_between([0,gene[1]-gene[0]], -1, 1, color='yellow', alpha=0.3)
+#Expression
 plt.fill_between(px, 0, py, color='r', alpha=0.5)
-plt.fill_between(nx, 0, ny, color='b', alpha=0.5)    
-plt.axvline(tss)
+plt.fill_between(nx, 0, ny, color='b', alpha=0.5) 
+#Interesting sites
+for site in reg:
+  plt.fill_between([site[0]-gene[0],site[1]-gene[0]],-1,1,color='green',alpha=0.3)
+
+#Gene sites
+plt.axvline(tss-gene[0])
 plt.axvline()
 plt.axvline(gene[1]-gene[0])
+plt.axvline(tes-gene[0])
+
 plt.gca().axis([spread[0]-gene[0], spread[1]-gene[0], -1, 1])
 plt.xlabel('Genome position')
 plt.ylabel('Expression Level')
