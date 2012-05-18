@@ -2,7 +2,7 @@ import csv
 from matplotlib.pylab import plot, show
 from numpy import arange
 from scipy import interpolate
-
+	
 folder = 'E-GEOD-18902'
 file_start = 'GSM'
 #18902
@@ -30,12 +30,12 @@ ti = 4
 
 
 #psbA1 18902
-#gene = 637798830
+gene = 637798830
 #psbA1 14225
 #gene = 'syc1103-h_at'
 
 #psbA2 18902
-gene = 637799310
+#gene = 637799310
 #psbA2 14225
 #gene = 'syc0167-m_s_at'
 

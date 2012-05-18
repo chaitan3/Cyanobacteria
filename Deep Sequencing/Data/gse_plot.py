@@ -1,11 +1,12 @@
 import csv
 import matplotlib.pyplot as plt
 
-time_point = 3
-#text = 'psbA time point ' + str(time_point+1)
-#gene = [413873,414955]
-text = 'purF time point ' + str(time_point+1)
-gene = [4596, 6077]
+time_point = 0
+text = 'psbA time point ' + str(time_point+1)
+gene = [413873,414955]
+tss = 413826-gene[0]
+#text = 'purF time point ' + str(time_point+1)
+#gene = [4596, 6077]
 
 walk = 1000
 
@@ -70,6 +71,9 @@ plt.plot(nx,ny,'b', label='Minus')
 plt.fill_between([0,gene[1]-gene[0]], -1, 1, color='yellow', alpha=0.3)
 plt.fill_between(px, 0, py, color='r', alpha=0.5)
 plt.fill_between(nx, 0, ny, color='b', alpha=0.5)    
+plt.axvline(tss)
+plt.axvline()
+plt.axvline(gene[1]-gene[0])
 plt.gca().axis([spread[0]-gene[0], spread[1]-gene[0], -1, 1])
 plt.xlabel('Genome position')
 plt.ylabel('Expression Level')
