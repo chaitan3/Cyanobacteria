@@ -1,0 +1,5 @@
+#!/bin/bash
+q="utr.fasta"
+s="search.fasta"
+#s="../Genome/circular-elongatus.fasta"
+blastn -query $q -subject $s -word_size 4 -reward 5 -penalty -4 -gapopen 8 -gapextend 6
