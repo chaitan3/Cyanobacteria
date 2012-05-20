@@ -43,7 +43,12 @@ Think:
 1. Why did microRNA's evolve, when there was a promoter mechanism already in place.
 Maybe because to degrade the existing mRNA's or to be separate from the clock mechanism.
 
-
-
+Problems
+1. Is the averaging model correct in the 60nt/12nt gse_plot code
+2. psbA1 mRNA expression levels differing in various data sets! which one is correct?
+Check whether this phenomenon of mRNA differing from promoter really exists
+3. The sites that have been identified do the tiling array analysis
+verify them with sequence alignment blastn with utr3 and utr5 and even mirbase
+4. Do we really get differential expression of psbA1 and the corresponding miRNA's
 
 
