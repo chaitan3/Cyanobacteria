@@ -3,19 +3,19 @@ from matplotlib.pylab import plot, show
 from numpy import arange
 from scipy import interpolate
 	
-folder = 'E-GEOD-18902'
+folder = 'E-GEOD-14225'
 file_start = 'GSM'
 #18902
-file_num = 468463
+#file_num = 468463
 #14225
-#file_num = 356401
+file_num = 356401
 file_end = '_sample_table.txt'
 #18902
-ts = 24
-te = 84
+#ts = 24
+#te = 84
 #14225
-#ts = 4
-#te = 48
+ts = 4
+te = 48
 ti = 4
 
 #kaiA 18902
@@ -26,11 +26,11 @@ ti = 4
 #purF 18902
 #gene = 637798409
 #purF 14225
-#gene = 'syc1507-h_at'
+gene = 'syc1507-h_at'
 
 
 #psbA1 18902
-gene = 637798830
+#gene = 637798830
 #psbA1 14225
 #gene = 'syc1103-h_at'
 

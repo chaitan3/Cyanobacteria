@@ -5,22 +5,38 @@ import sys
 time_point = 0
 if len(sys.argv) > 1:
   time_point = int(sys.argv[1])
-text = 'psbA time point ' + str(time_point+1)
-gene = [413873,414955]
-tss = 413826
-tes = 415018
+  
+#~ text = 'psbA corr time point ' + str(time_point+1)
+#~ gene = [413873,414955]
+#~ tss = 413826
+#~ tes = 415018
+#~ reg = [
+#~ #Anti sense
+#~ [413843,413937],
+#~ #3'UTR
+#~ [415031,415062],
+#~ [415078,415122],
+#~ [415151,415177],
+#~ [415217,415253],
+#~ [415291,415310],
+#~ [415352,415377]
+#~ 
+#~ ]
+
+text = 'kaiA corr time point ' + str(time_point+1)
+gene = [1240557,1241411]
+tss = 1240546
+tes = 1241477
 reg = [
 #Anti sense
-[413843,413937],
-#3'UTR
-[415031,415062],
-[415078,415122],
-[415151,415177],
-[415217,415253],
-[415291,415310],
-[415352,415377]
+[1240836,1240876],
+[1240925,1240957],
+[1240995,1241023],
+#5'UTR
+[1240501,1240527],
 
 ]
+
 #text = 'purF time point ' + str(time_point+1)
 #gene = [4596, 6077]
 
@@ -86,13 +102,13 @@ print 'Data generated'
 plt.plot(px,py,'r', label='Plus')
 plt.plot(nx,ny,'b', label='Minus')
 #Gene
-plt.fill_between([0,gene[1]-gene[0]], -1, 1, color='yellow', alpha=0.3)
+plt.fill_between([0,gene[1]-gene[0]], -1, 2, color='yellow', alpha=0.3)
 #Expression
 plt.fill_between(px, 0, py, color='r', alpha=0.5)
 plt.fill_between(nx, 0, ny, color='b', alpha=0.5) 
 #Interesting sites
 for site in reg:
-  plt.fill_between([site[0]-gene[0],site[1]-gene[0]],-1,1,color='green',alpha=0.3)
+  plt.fill_between([site[0]-gene[0],site[1]-gene[0]],-1,2,color='green',alpha=0.3)
 
 #Gene sites
 plt.axvline(tss-gene[0])
@@ -106,4 +122,4 @@ plt.ylabel('Expression Level')
 plt.legend()
 plt.title(text)
 #plt.show()
-plt.savefig(text + '.svg')
+plt.savefig(text + '.png')
