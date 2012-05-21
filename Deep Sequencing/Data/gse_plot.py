@@ -1,42 +1,44 @@
 import csv
 import matplotlib.pyplot as plt
 import sys
+from math import log
 
 time_point = 0
 if len(sys.argv) > 1:
   time_point = int(sys.argv[1])
   
-#~ text = 'psbA corr time point ' + str(time_point+1)
-#~ gene = [413873,414955]
-#~ tss = 413826
-#~ tes = 415018
-#~ reg = [
-#~ #Anti sense
-#~ [413843,413937],
-#~ #3'UTR
-#~ [415031,415062],
-#~ [415078,415122],
-#~ [415151,415177],
-#~ [415217,415253],
-#~ [415291,415310],
-#~ [415352,415377]
-#~ 
-#~ ]
-
-text = 'kaiA corr time point ' + str(time_point+1)
-gene = [1240557,1241411]
-tss = 1240546
-tes = 1241477
+text = 'psbA corr time point ' + str(time_point+1)
+gene = [413873,414955]
+tss = 413826
+tes = 415018
 reg = [
 #Anti sense
-[1240836,1240876],
-[1240925,1240957],
-[1240995,1241023],
-#5'UTR
-[1240501,1240527],
+[413843,413937],
+#3'UTR
+[415031,415062],
+[415078,415122],
+[415151,415177],
+[415217,415253],
+[415291,415310],
+[415352,415377]
 
 ]
 
+#~ text = 'kaiA corr time point ' + str(time_point+1)
+#~ gene = [1240557,1241411]
+#~ tss = 1240546
+#~ tes = 1241477
+#~ reg = [
+#~ #Anti sense
+#~ [1240836,1240876],
+#~ [1240925,1240957],
+#~ [1240995,1241023],
+#~ #5'UTR
+#~ [1240501,1240527],
+#~ 
+#~ ]
+
+#text = 'purF time point ' + str(time_point+1)
 #text = 'purF time point ' + str(time_point+1)
 #gene = [4596, 6077]
 
@@ -81,8 +83,9 @@ for i in range(0,len(data)):
   if (start > spread[0]) and (stop < spread[1]) and (strand == '+') and (db == 'CP000100') and (type == 'chromosome'):
     s = 0
     for j in range(-5, 1):
-      s += val[int(data[i+j][0])-1][time_point]
+      s += 2**val[int(data[i+j][0])-1][time_point]
     s /= 5
+    s = log(s,2)
     #~ s = val[int(data[i][0])-1][time_point]
     for j in range(0,12):
       px.append(start + j - gene[0])
@@ -90,8 +93,9 @@ for i in range(0,len(data)):
   if (stop > spread[0]) and (start < spread[1]) and (strand == '-') and (db == 'CP000100')  and (type == 'chromosome'):
     s = 0
     for j in range(-5, 1):
-      s += val[int(data[i+j][0])-1][time_point]
+      s += 2**val[int(data[i+j][0])-1][time_point]
     s /= 5
+    s = log(s,2)
     #~ s = val[int(data[i][0])-1][time_point]
     for j in range(0,12):
       nx.append(stop + j - gene[0])
