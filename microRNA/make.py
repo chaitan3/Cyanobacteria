@@ -45,4 +45,4 @@ s[1240527:1240501:-1]
 SeqIO.write(reg,'kaiA-db.fasta','fasta')
 
 SeqIO.write([s[start+utr5_size:start:-1]],'kaiA-utr5.fasta','fasta')
-SeqIO.write([s[end:end-utr3_size:-1]],'kaiA-utr5.fasta','fasta')
+SeqIO.write([s[end:end-utr3_size:-1]],'kaiA-utr3.fasta','fasta')
