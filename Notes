@@ -51,4 +51,12 @@ Check whether this phenomenon of mRNA differing from promoter really exists
 verify them with sequence alignment blastn with utr3 and utr5 and even mirbase
 4. Do we really get differential expression of psbA1 and the corresponding miRNA's
 
+Todo:
+1. Do a genome wide survey of microrna's and match it with the 5' UTR of kaiA and psbA
+2. For matching use a better tool than just blast
+3. Check the overlap of operons with the TSS/TES
+4. Transcription levels of Vijayan Microarray data should be confirmed, match it with the RNA 
+sequencing data. Methodology used.
+
+
 
