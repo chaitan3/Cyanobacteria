@@ -3,13 +3,13 @@
 
 $cut=int(shift);
 $strand=shift;
-if ($strand=='+') {
+if ($strand eq '+') {
 	$name = 'Plus';
 	$comp = 1;
 }
 else {
 	$name = 'Minus';
-	$comp = 0;
+	$comp = -1;
 }
 $file="GSE29264_RNA_Sequencing_Chr_$name.wig";
 $outfile=">$name$cut.fasta";
@@ -49,7 +49,7 @@ foreach $line (<rna>) {
   }
   else {
     $feat = new Bio::SeqFeature::Generic ( -start => $s, -end => $e,
-                                -strand => 1);
+                                -strand => $comp);
     $flag = 1;
     foreach (@genes) {
       if ($feat->overlaps($_) and ($feat->strand == $_->strand)) {
@@ -61,16 +61,10 @@ foreach $line (<rna>) {
    	  print ",";
    	  print $e;
    	  print "\n";
-	  if ($comp) {
-		$location = Bio::Location::Simple->new(-start  => $s,
+	  $location = Bio::Location::Simple->new(-start  => $s,
                                           -end   => $e-1,
-                                          -strand => "-1");
-	    $pseq = $seq->subseq($location);
-      }
-	  else {
-	    $pseq = $seq->subseq($s,$e-1);
-   	  }
-	  $db_seq = Bio::Seq->new(-seq=>$pseq,-id=>$seq->id);
+                                          -strand => $comp*(-1));
+	  $db_seq = Bio::Seq->new(-seq=>$seq->subseq($location),-id=>"$s,$e,$comp");
       $db->write_seq($db_seq);
     }
     $s = $e;
