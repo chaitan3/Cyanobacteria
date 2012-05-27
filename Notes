@@ -58,5 +58,11 @@ Todo:
 4. Transcription levels of Vijayan Microarray data should be confirmed, match it with the RNA 
 sequencing data. Methodology used.
 
+miRNA prediction:
+1. Identifying Targets of miRNA's 
+2. Identifying miRNA's by looking at Transcription start and end sites.
+3. Identifying miRNA's by looking at conservation of intergenic regions.
+4. Tiling Microarray + RNA sequencing
+
 
 
