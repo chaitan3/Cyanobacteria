@@ -1,4 +1,0 @@
-#!/bin/bash
-q="db.fasta"
-s="utr3.fasta"
-blastn -query $q -subject $s -word_size 4 -reward 2 -penalty -2 -gapopen 4 -gapextend 2 $@
