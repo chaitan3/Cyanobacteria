@@ -1,5 +1,6 @@
 import csv
 import matplotlib.pyplot as plt
+from scipy.stats import pearsonr
 from Bio import SeqIO
 
 neg = 229169
@@ -35,7 +36,8 @@ for seq in SeqIO.parse("../../microRNA/miRNA7.fasta", "fasta"):
 		start = int(s[1]) - int(s[4])
 		end = int(s[1]) - int(s[3])
 		probe = start/12 + neg
-	print probe, c
+	print probe
+	print c, pearsonr(val[probe], val[gene])
 	plt.plot(time, val[probe], label=str(c))
 	
 
