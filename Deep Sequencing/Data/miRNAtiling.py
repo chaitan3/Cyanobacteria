@@ -44,7 +44,7 @@ for seq in SeqIO.parse(db, "fasta"):
 	print c, pearsonr(val[probe], val[gene])
 #	plt.plot(time, val[probe], label=str(c))
 
-print sorted(enumerate(p),key=lambda x:x[1],reverse=True)
+print sorted(enumerate(p),key=lambda x:x[1])
 
 #plt.plot(time, val[gene],'r--',label='psbA')
 #plt.legend()
