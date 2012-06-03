@@ -7,9 +7,9 @@ gene = 34489
 time = [60, 68, 72, 80]
 base = '/home/chaitan3/GSE-Raw/GSM7242'
 num = 28
-seqio= open("../../microRNA/miRNA7.fasta")
+seqio= open("../../microRNA/db.fasta")
 acc = []
-
+exp = []
 c = 0
 for seq in SeqIO.parse(seqio, "fasta"):
 	c += 1
@@ -38,13 +38,13 @@ for seq in SeqIO.parse(seqio, "fasta"):
 		#4-Name, 9-F635 Mean, 14-B635 Mean, 44-Log Ratio, 47-F-B635,48-F-B532
 		fg.append(float(fields[48]))
 		bg.append(float(fields[47]))
+	exp.append(float(sum(fg))/len(fg))
 	if min(fg) > 100:
 		print "qualifies"
 		acc.append(c)
 		for i in range(0, len(time)):
 			print fg[i], bg[i], log(fg[i]/bg[i],2)
 print acc
-		
-	
+print sorted(enumerate(exp),key=lambda x:x[1],reverse=True)	
 	
 	

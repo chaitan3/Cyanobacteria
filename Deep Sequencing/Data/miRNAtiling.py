@@ -1,5 +1,5 @@
 import csv
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from scipy.stats import pearsonr
 from Bio import SeqIO
 
@@ -22,7 +22,9 @@ for r in rows:
 print 'Microarray imported'
 
 c = 0
-for seq in SeqIO.parse("../../microRNA/miRNA7.fasta", "fasta"):
+p = []
+db = open("../../microRNA/db.fasta")
+for seq in SeqIO.parse(db, "fasta"):
 	c += 1
 	print seq.id
 	s = seq.id.split(',')
@@ -37,10 +39,13 @@ for seq in SeqIO.parse("../../microRNA/miRNA7.fasta", "fasta"):
 		end = int(s[1]) - int(s[3])
 		probe = start/12 + neg
 	print probe
-	print c, pearsonr(val[probe], val[gene])
-	plt.plot(time, val[probe], label=str(c))
-	
+	p.append(pearsonr(val[probe], val[gene])[0])
 
-plt.plot(time, val[gene],'r--',label='psbA')
-plt.legend()
-plt.show()
+	print c, pearsonr(val[probe], val[gene])
+#	plt.plot(time, val[probe], label=str(c))
+
+print sorted(enumerate(p),key=lambda x:x[1],reverse=True)
+
+#plt.plot(time, val[gene],'r--',label='psbA')
+#plt.legend()
+#plt.show()

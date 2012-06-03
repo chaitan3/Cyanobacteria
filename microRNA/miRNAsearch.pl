@@ -45,7 +45,7 @@ print "Done\n";
 $mi = Bio::SeqIO->new(-file=>'>>db.fasta', -flush=>1);
 @sorted = sort {$a->[3] <=> $b->[3]} @recs;
 $size = @recs;
-for ($i=0; $i<$size; $i++)  {
+for ($i=0; $i<100; $i++)  {
 	$newseq = Bio::Seq->new( -display_id => $sorted[$i][0],-seq => $sorted[$i][-3]->subseq($sorted[$i][-2],$sorted[$i][-1]));
 	$mi->write_seq($newseq);
 	foreach $j (@{$sorted[$i]}) {
