@@ -25,7 +25,6 @@ c = 0
 p = []
 db = open("../../microRNA/db.fasta")
 for seq in SeqIO.parse(db, "fasta"):
-	c += 1
 	print seq.id
 	s = seq.id.split(',')
 	s[0] = s[0][1:]
@@ -43,6 +42,7 @@ for seq in SeqIO.parse(db, "fasta"):
 
 	print c, pearsonr(val[probe], val[gene])
 	print val[probe]
+	c += 1
 #	plt.plot(time, val[probe], label=str(c))
 
 print val[gene]

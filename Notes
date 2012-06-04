@@ -64,5 +64,9 @@ miRNA prediction:
 3. Identifying miRNA's by looking at conservation of intergenic regions.
 4. Tiling Microarray + RNA sequencing
 
+Good Candidates: sorted by absolute
+high 56, 193
+mid 123, 141
+low 47, 44
 
 

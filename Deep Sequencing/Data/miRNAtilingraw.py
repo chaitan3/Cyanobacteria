@@ -12,7 +12,7 @@ acc = []
 exp = []
 c = 0
 for seq in SeqIO.parse(seqio, "fasta"):
-	c += 1
+	
 	s = seq.id.split(',')
 	s[0] = s[0][1:]
 	strand = int(s[2])
@@ -44,6 +44,7 @@ for seq in SeqIO.parse(seqio, "fasta"):
 		acc.append(c)
 		for i in range(0, len(time)):
 			print fg[i], bg[i], log(fg[i]/bg[i],2)
+	c += 1
 print acc
 print sorted(enumerate(exp),key=lambda x:x[1],reverse=True)	
 	
