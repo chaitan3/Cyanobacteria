@@ -1,10 +1,12 @@
 use Bio::SeqIO;
 
-$gene_in = Bio::SeqIO->new(-file=>'tmp.fasta');
+$gene_in = Bio::SeqIO->new(-file=>'gene.fasta');
 $gene = $gene_in->next_seq();
 $seq_in = Bio::SeqIO->new(-file=>'db.fasta');
 
 $c=0;
+mkdir 'rna';
+chdir 'rna';
 while(my $seq = $seq_in->next_seq()) {
 	
 	mkdir $c;
@@ -20,8 +22,7 @@ while(my $seq = $seq_in->next_seq()) {
 	chdir '..';
 	$c++;
 }
-
-
+chdir '..';
 
 
 

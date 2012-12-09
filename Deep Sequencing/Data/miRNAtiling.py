@@ -1,10 +1,21 @@
 import csv
+import sys
 #import matplotlib.pyplot as plt
 from scipy.stats import pearsonr
 from Bio import SeqIO
 
 neg = 229169
-gene = 34489
+
+genestarts = {'kaiA': -1241411,
+              'kaiB': -1240467,
+              'pex': -672462,
+              'psbA1': 413873,
+              'nir': -1264801 
+             }
+
+gene = genestarts[sys.argv[1]]/12
+if gene < 0:
+  gene = neg-gene
 time = [60, 68, 72, 80]
 
 f = open("GSE29264-GPL13535_series_matrix.txt")

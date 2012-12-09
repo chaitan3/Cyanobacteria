@@ -69,4 +69,34 @@ high 56, 193
 mid 123, 141
 low 47, 44
 
+Existing Segmentation software:
+HMMSeg
+Segway
 
+Verifying miRNA results:
+training set required
+validation set required
+test set, obviously already present
+
+data normalization
+expected value for the data, expectation maximization
+
+Factors: RNA Seq value at the nucleotide, the nucleotide itself, 
+
+
+Meeting points:
+1. Try and integrate the conserved sequences approach across Elongatus
+2. Target finding for kaiA and other important genes. DONE
+3. Why is it publishable?
+4. Remove tRNA and other highly transcribed genes: DONE
+5. Length of Transcript: Steep drop: DONE
+6. Dinucleotide frequencies: -10 promoter element: Pribnow box: TATAAT: DONE
+7. Negative Strand?
+8. Machine Learning technique?
+9. Incorporate Raw Tiling
+
+kaiB: neg-1,14 pos-11,6
+kaiA: neg-10,2 pos-7,13
+nir: neg-16 pos-8
+pex: neg-6,10 pos-7
+psbA1: neg-4 pos-0,6

@@ -1,7 +1,6 @@
 #Find overlapping regions of subsets of opposite transcripters with genes. read subset.perl. write final/curated.out
 #Find overlapping asRNA regions with psbA1, read full.perl, write stdout
 
-$cut=int(shift);
 $strand=shift;
 if ($strand eq '+') {
 	$name = 'Plus';
@@ -11,65 +10,43 @@ else {
 	$name = 'Minus';
 	$comp = -1;
 }
-$file="GSE29264_RNA_Sequencing_Chr_$name.wig";
-$outfile=">$name$cut.fasta";
+$outfile=">$name.fasta";
 print "$outfile\n";
 use Bio::SeqFeature::Generic;
+use Bio::SeqFeature::Collection;
 use Bio::FeatureIO;
 use Bio::SeqIO;
 use Bio::Seq;
-use Bio::Location::Simple;
-$seq_in = Bio::SeqIO->new(-file=>'../../Genome/circular-elongatus.fasta');
-$seq = $seq_in->next_seq();
+$seq_in = Bio::SeqIO->new(-file=>'../../mlmodel/all-transcripts.fasta');
 $db = Bio::SeqIO->new(-file=>$outfile);
 
 select((select(STDOUT), $|=1)[0]);
 
 
-my $fin = Bio::FeatureIO->new(-file=>'elongatus.ptt', -format=>'ptt');
+my $fin = Bio::FeatureIO->new(-file=>'../../Genome/circular-elongatus.ptt', -format=>'ptt');
 my $psb;
 my @genes;
 while (my $f = $fin->next_feature) {
   push @genes, $f;
 }
-
-open (rna, $file) or die $!;
-$s = 0;$e = 0;
-foreach $line (<rna>) {
-  ($pos, $sig) = split('\t', $line);
-  if ($s == $e) {
-    if ($sig > $cut) {
-      $s = $pos;
-    }
-  }
-  elsif ($s > $e) {
-    if ($sig < $cut) {
-	  $e = $pos;
-	}
-  }
-  else {
-    $feat = new Bio::SeqFeature::Generic ( -start => $s, -end => $e,
-                                -strand => $comp);
-    $flag = 1;
-    foreach (@genes) {
-      if ($feat->overlaps($_) and ($feat->strand == $_->strand)) {
-        $flag = 0;
-      }
-    }
-    if ($flag) {
-   	  print $s;
-   	  print ",";
-   	  print $e;
-   	  print "\n";
-	  $location = Bio::Location::Simple->new(-start  => $s,
-                                          -end   => $e-1,
-                                          -strand => $comp*(-1));
-	  $db_seq = Bio::Seq->new(-seq=>$seq->subseq($location),-id=>"$s,$e,$comp");
-      $db->write_seq($db_seq);
-    }
-    $s = $e;
+my $col = Bio::SeqFeature::Collection->new();
+$col->add_features(\@genes);
+my $count = 0;
+while(my $seq = $seq_in->next_seq()) {
+  $flag = 1;
+  my @s = split(',', $seq->display_id);
+  $feat = new Bio::SeqFeature::Generic ( -start => $s[0], -end => $s[1],
+                                -strand => $s[2]);
+  my @feats = $col->features_in_range(-start => $s[0], -end => $s[1], -strand => $s[2]
+  -contain => false, -strandmatch => 'strong');
+  my $size = $#feats+1;
+  print "$s[0]\n";
+  if ($size > 0) {
+    $count = $count + 1;
+    $db->write_seq($seq);
   }
 } 
+print $count;
 close rna;
 
 
